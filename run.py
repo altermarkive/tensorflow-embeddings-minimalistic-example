@@ -41,7 +41,7 @@ def create_tensor(features):
 
 
 def define_embedding(embedding_variable, dimensions):
-    summary_writer = tf.summary.FileWriter('/tmp/logs')
+    summary_writer = tf.compat.v1.summary.FileWriter('/tmp/logs')
     config = projector.ProjectorConfig()
     embedding = config.embeddings.add()
     embedding.tensor_name = embedding_variable.name
@@ -53,13 +53,13 @@ def define_embedding(embedding_variable, dimensions):
 
 
 def run_tensorflow():
-    session = tf.InteractiveSession()
-    session.run(tf.global_variables_initializer())
+    session = tf.compat.v1.InteractiveSession()
+    session.run(tf.compat.v1.global_variables_initializer())
     return session
 
 
 def save_checkpoint(session):
-    saver = tf.train.Saver()
+    saver = tf.compat.v1.train.Saver()
     saver.save(session, '/tmp/logs/model.ckpt', 0)
 
 
