@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import numpy as np
 
 from PIL import Image
@@ -105,6 +105,7 @@ def create_metadata(labels, embedding):
 
 
 def main():
+    tf.disable_v2_behavior()
     features, labels = load_data()
     embedding_variable = create_tensor(features)
     single = 100
