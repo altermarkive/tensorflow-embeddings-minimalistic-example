@@ -1,4 +1,4 @@
-FROM ubuntu:bionic-20190307
+FROM ubuntu:focal-20210217
 
 RUN apt-get -yq update && \
     DEBIAN_FRONTEND=noninteractive \
