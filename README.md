@@ -8,6 +8,6 @@ Embedding is a mapping of data set from a high-dimensional to a low-dimensional 
 The only dependency to run this example is to have Docker installed.
 
 To run the example simply execute the `run.sh` script. Then, to view
-the visualization of the embeddings go to [http://localhost:6006/#embeddings](http://localhost:6006/#embeddings).
+the visualization of the embeddings go to [http://localhost:6006/#projector](http://localhost:6006/#projector).
 
 ![screenshot](screenshot.png)
