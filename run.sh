@@ -1,6 +1,6 @@
 #!/bin/sh
 
-SELF=$(realpath $0)
+SELF=$(realpath $0 2> /dev/null || python -c "import os; print(os.path.realpath('$1'))")
 BASE=$(dirname $SELF)
 sudo rm -rf $BASE/logs
 docker build -t embedder .
